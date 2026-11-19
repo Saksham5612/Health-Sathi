@@ -1,0 +1,432 @@
+/* Login Page Styles - optimized for global navbar */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+  padding-top: 100px; /* Space for global navbar */
+}
+
+.registration-container {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: white;
+}
+
+.registration-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Worker Panel - Left Side */
+.worker-panel {
+  background: linear-gradient(135deg, #20B2AA, #48D1CC);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.worker-panel .panel-content {
+  text-align: center;
+  padding: 40px;
+}
+
+.worker-panel h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.worker-panel p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.worker-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.worker-btn:hover {
+  background: white;
+  color: #20B2AA;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Provider Panel - Right Side */
+.provider-panel {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.provider-panel .panel-content {
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.provider-panel h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #20B2AA;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.provider-panel p {
+  color: #48D1CC;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.provider-form .form-group {
+  margin-bottom: 20px;
+}
+
+.provider-form .form-control {
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 0;
+  padding: 12px 0;
+  font-size: 1rem;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.provider-form .form-control:focus {
+  box-shadow: none;
+  border-color: #20B2AA;
+  background: transparent;
+}
+
+.provider-form .form-control::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.join-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #20B2AA, #48D1CC);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.join-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(32, 178, 170, 0.3);
+}
+
+.join-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Worker Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.worker-modal {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 1000px;
+  width: 100%;
+  height: 600px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-panels {
+  display: flex;
+  height: 100%;
+}
+
+.modal-panel {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Worker Form Panel */
+.worker-form-panel {
+  background: white;
+}
+
+.worker-form-panel h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #20B2AA;
+  margin-bottom: 10px;
+}
+
+.worker-form-panel p {
+  color: #48D1CC;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+}
+
+.worker-form .form-group {
+  margin-bottom: 20px;
+}
+
+.worker-form .form-control,
+.worker-form .form-select {
+  border: none;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 0;
+  padding: 12px 0;
+  font-size: 1rem;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.worker-form .form-control:focus,
+.worker-form .form-select:focus {
+  box-shadow: none;
+  border-color: #20B2AA;
+  background: transparent;
+}
+
+.worker-form .form-control::placeholder {
+  color: #999;
+  font-size: 0.95rem;
+}
+
+.create-id-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #20B2AA, #48D1CC);
+  border: none;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.create-id-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(32, 178, 170, 0.3);
+}
+
+.create-id-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Medical Professional Panel */
+.medical-panel {
+  background: linear-gradient(135deg, #20B2AA, #48D1CC);
+  color: white;
+  text-align: center;
+}
+
+.medical-panel h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medical-panel p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.provider-registration-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.provider-registration-btn:hover {
+  background: white;
+  color: #20B2AA;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Modal Button */
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.close-modal:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.close-modal i {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Back to Home Button */
+.back-home {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.back-home:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.back-home i {
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .registration-container {
+    flex-direction: column;
+    height: auto;
+    max-width: 400px;
+  }
+  
+  .registration-panel {
+    min-height: 300px;
+  }
+  
+  .worker-panel .panel-content,
+  .provider-panel .panel-content {
+    padding: 30px 20px;
+  }
+  
+  .worker-panel h1 {
+    font-size: 2rem;
+  }
+  
+  .provider-panel h2 {
+    font-size: 1.5rem;
+  }
+  
+  .modal-panels {
+    flex-direction: column;
+  }
+  
+  .modal-panel {
+    padding: 30px 20px;
+  }
+  
+  .medical-panel h2 {
+    font-size: 1.8rem;
+  }
+  
+  .back-home {
+    top: 20px;
+    left: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page {
+    padding: 10px;
+  }
+  
+  .registration-container {
+    margin: 10px;
+    max-width: none;
+  }
+  
+  .worker-panel h1 {
+    font-size: 1.8rem;
+  }
+  
+  .worker-panel p,
+  .provider-panel p {
+    font-size: 0.9rem;
+  }
+  
+  .worker-btn,
+  .join-btn,
+  .create-id-btn,
+  .provider-registration-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}

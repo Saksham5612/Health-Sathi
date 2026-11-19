@@ -1,0 +1,436 @@
+/* Enhanced Registration Modal Styles */
+.registration-modal .modal-dialog {
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.registration-modal .modal-content {
+  border: none;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.register-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 650px;
+  border-radius: 30px;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #fff;
+  display: flex;
+  align-items: stretch;
+}
+
+.register-container p {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.register-container span {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 1.2rem 0;
+  display: block;
+}
+
+.registration-form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  height: 100%;
+  min-height: 650px;
+  flex: 1;
+}
+
+.registration-form h1 {
+  background: linear-gradient(135deg, #0099CC 0%, #00D4AA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.registration-form .subtitle {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 400;
+}
+
+.form-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transition: all 0.6s ease-in-out;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.form-container .registration-form {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.sign-in {
+  left: 0;
+  z-index: 2;
+}
+
+.register-container.active .sign-in {
+  transform: translateX(100%);
+}
+
+.sign-up {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.register-container.active .sign-up {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+
+@keyframes move {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.toggle-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 0 30px 30px 0;
+  z-index: 1000;
+}
+
+.register-container.active .toggle-container {
+  transform: translateX(-100%);
+  border-radius: 30px 0 0 30px;
+}
+
+.toggle {
+  background: linear-gradient(135deg, #00D4AA 0%, #0099CC 100%);
+  height: 100%;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-container.active .toggle {
+  transform: translateX(50%);
+}
+
+.toggle-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.toggle-panel h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-panel p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.toggle-btn:hover {
+  background: white;
+  color: #0099CC;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
+.toggle-panel h1 {
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  background: none;
+  -webkit-text-fill-color: white;
+}
+
+.toggle-panel p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: white;
+}
+
+.toggle-left {
+  transform: translateX(-200%);
+}
+
+.register-container.active .toggle-left {
+  transform: translateX(0);
+}
+
+.toggle-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.register-container input,
+.register-container select {
+  background: rgba(248, 250, 252, 0.9);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin: 12px 0;
+  padding: 15px 20px;
+  font-size: 15px;
+  border-radius: 15px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.register-container input:focus,
+.register-container select:focus {
+  border-color: #0099CC;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0, 153, 204, 0.1), 0 4px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.register-container input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+}
+
+.register-container input.is-invalid,
+.register-container select.is-invalid {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #0099CC 0%, #00D4AA 100%);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 153, 204, 0.3);
+  width: auto;
+  min-width: 180px;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 153, 204, 0.4);
+  background: linear-gradient(135deg, #007BB8 0%, #00C096 100%);
+}
+
+.register-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(0, 153, 204, 0.3);
+}
+
+.register-container button.hidden {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.register-container button.hidden:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.modal-back-home {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+  z-index: 100;
+  cursor: pointer;
+  border: none;
+}
+
+.modal-back-home:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 768px) {
+  .registration-modal .modal-dialog {
+    max-width: 95%;
+    margin: 1rem auto;
+  }
+  
+  .register-container {
+    min-height: 500px;
+    flex-direction: column;
+  }
+
+  .form-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .toggle-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 0 0 30px 30px;
+    top: auto;
+    right: auto;
+  }
+
+  .toggle {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .toggle-panel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }
+
+  .toggle-panel h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .toggle-panel p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .registration-form {
+    padding: 30px 20px;
+    min-height: 300px;
+  }
+
+  .registration-form h1 {
+    font-size: 2rem;
+  }
+
+  .register-btn {
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-form {
+    padding: 20px 15px;
+  }
+
+  .registration-form h1 {
+    font-size: 1.8rem;
+  }
+
+  .register-container input,
+  .register-container select {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .toggle-panel h1 {
+    font-size: 1.8rem;
+  }
+}
